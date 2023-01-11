@@ -26,6 +26,17 @@ plugins {
     id 'ear'
 }
 
+// convention - deprecated:  appDirName = "src/main/ear-config"
+
+// Learning exercise 
+
+ear {
+ appDirName = "src/main/ear-config"
+}
+
+
+
+
 liberty {
  server {
    stripVersion = 'true'

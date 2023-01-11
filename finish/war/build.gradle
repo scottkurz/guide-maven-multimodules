@@ -16,6 +16,7 @@ dependencies {
 
 description = 'guide-maven-multimodules-war'
 
+
 tasks.named('jar') {
-    enabled = true
+    enabled = false
 }

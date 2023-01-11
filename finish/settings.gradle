@@ -1,0 +1,7 @@
+rootProject.name = 'guide-maven-multimodules'
+include(':guide-maven-multimodules-ear')
+include(':guide-maven-multimodules-war')
+include(':guide-maven-multimodules-jar')
+project(":guide-maven-multimodules-ear").projectDir = file('ear')
+project(":guide-maven-multimodules-war").projectDir = file('war')
+project(":guide-maven-multimodules-jar").projectDir = file('jar')
