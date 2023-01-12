@@ -3,7 +3,6 @@
  */
 
 plugins {
-    id 'io.openliberty.guides.java-conventions'
+    id 'java-library'
 }
-
 description = 'guide-maven-multimodules-jar'

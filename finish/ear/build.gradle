@@ -8,17 +8,23 @@ buildscript {
         mavenLocal()
     }
     dependencies {
+classpath 'io.openliberty.tools:liberty-gradle-plugin:3.4.2-SKSK'
+//classpath 'io.openliberty.tools:liberty-gradle-plugin:3.4.1'
+/*
         classpath ('io.openliberty.tools:liberty-ant-tasks:1.9.9')
         classpath ('io.openliberty.tools:ci.common:1.8.20')
+*/
     }
-
 }
 
 plugins {
-    id 'io.openliberty.guides.java-conventions'
-    id "io.openliberty.tools.gradle.Liberty" version "3.4.1"
+//    id "io.openliberty.tools.gradle.Liberty" version "3.4.2-SKSK"
+    id 'java-library'
     id 'ear'
 }
+
+apply plugin: 'liberty'
+
 
 // Learning exercise 
 // convention - deprecated:  appDirName = "src/main/ear-config"
@@ -35,6 +41,11 @@ liberty {
  }
 }
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
 dependencies {
   implementation project(':guide-maven-multimodules-jar')
   implementation project(':guide-maven-multimodules-war')
@@ -46,3 +57,5 @@ dependencies {
 
 description = 'guide-maven-multimodules-ear'
 
+
+deploy.dependsOn ear

@@ -6,6 +6,7 @@ pluginManagement {
  }
 }
 
+
 rootProject.name = 'guide-maven-multimodules'
 include(':guide-maven-multimodules-ear')
 include(':guide-maven-multimodules-war')

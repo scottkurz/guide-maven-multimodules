@@ -3,12 +3,17 @@
  */
 
 plugins {
-    id 'io.openliberty.guides.java-conventions'
     id 'war'
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation project(':guide-maven-multimodules-jar')
+    compile project(':guide-maven-multimodules-jar')
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
     providedCompile 'jakarta.platform:jakarta.jakartaee-api:9.1.0'
     providedCompile 'org.eclipse.microprofile:microprofile:5.0'
@@ -16,7 +21,8 @@ dependencies {
 
 description = 'guide-maven-multimodules-war'
 
-
+/*
 tasks.named('jar') {
     enabled = false
 }
+*/
