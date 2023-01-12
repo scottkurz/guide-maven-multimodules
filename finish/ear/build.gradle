@@ -12,12 +12,6 @@ buildscript {
         classpath ('io.openliberty.tools:ci.common:1.8.20')
     }
 
-/*
-    dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.4.1'
-    }
-*/
-
 }
 
 plugins {
@@ -26,10 +20,8 @@ plugins {
     id 'ear'
 }
 
-// convention - deprecated:  appDirName = "src/main/ear-config"
-
 // Learning exercise 
-
+// convention - deprecated:  appDirName = "src/main/ear-config"
 ear {
  appDirName = "src/main/ear-config"
 }
